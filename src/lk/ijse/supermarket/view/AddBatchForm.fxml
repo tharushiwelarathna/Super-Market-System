@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="904.0" prefWidth="1208.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.AddBatchFormController">
+   <children>
+      <ImageView fx:id="imgAdminHome" fitHeight="84.0" fitWidth="88.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="138.0" layoutY="24.0" prefHeight="64.0" prefWidth="386.0" text="Manage Batch">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="20.0" layoutY="115.0" prefHeight="759.0" prefWidth="1166.0" style="-fx-background-color: #A2DBFA;">
+         <children>
+            <Label layoutX="37.0" layoutY="36.0" prefHeight="47.0" prefWidth="169.0" text="Property ID">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="107.0" prefHeight="47.0" prefWidth="169.0" text="Batch">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="177.0" prefHeight="47.0" prefWidth="169.0" text="Price ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="36.0" prefHeight="47.0" prefWidth="169.0" text="Active State">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="107.0" prefHeight="47.0" prefWidth="169.0" text="Quantity">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPropertyID" layoutX="206.0" layoutY="36.0" prefHeight="47.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtBatch" layoutX="206.0" layoutY="107.0" prefHeight="47.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtPrice" layoutX="206.0" layoutY="177.0" prefHeight="47.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtDiscount" alignment="CENTER" layoutX="206.0" layoutY="262.0" prefHeight="47.0" prefWidth="317.0" promptText="Discount">
+               <font>
+                  <Font size="22.0" />
+               </font></JFXTextField>
+            <Label layoutX="564.0" layoutY="177.0" prefHeight="47.0" prefWidth="169.0" text="Product ID">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbActiveState" layoutX="740.0" layoutY="36.0" prefHeight="47.0" prefWidth="375.0" />
+            <JFXButton fx:id="btnSaveBatch" layoutX="451.0" layoutY="356.0" onAction="#btnSaveBatchOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #29BB89;" text="Save Batch">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblProperty" layoutX="4.0" layoutY="417.0" prefHeight="338.0" prefWidth="1157.0">
+              <columns>
+                <TableColumn prefWidth="129.0" text="Property ID" />
+                <TableColumn prefWidth="155.0" text="Batch" />
+                  <TableColumn prefWidth="156.0" text="Price" />
+                  <TableColumn prefWidth="202.0" text="Discount " />
+                  <TableColumn prefWidth="170.0" text="Active State" />
+                  <TableColumn prefWidth="178.0" text="Quantity" />
+                  <TableColumn prefWidth="166.0" text="Product ID" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnDeleteBatch" layoutX="690.0" layoutY="356.0" onAction="#btnDeleteBatchOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #FB3640;" text="Delete Batch">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateBatch" layoutX="927.0" layoutY="356.0" onAction="#btnUpdateBatchOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #1597BB;" text="Update Batch">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbProductID" layoutX="740.0" layoutY="177.0" prefHeight="47.0" prefWidth="375.0" />
+            <JFXTextField fx:id="txtQty" layoutX="740.0" layoutY="107.0" prefHeight="47.0" prefWidth="375.0" />
+            <JFXButton fx:id="btnAddNewBatch" layoutX="206.0" layoutY="356.0" onAction="#btnAddNewBatchOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #9FD8DF;" text="Add New Batch">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXCheckBox fx:id="setDiscount" layoutX="37.0" layoutY="262.0" onAction="#setDiscountOnAction" prefHeight="47.0" prefWidth="158.0" text="Set Discount">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="lblProductName" alignment="CENTER" layoutX="748.0" layoutY="262.0" prefHeight="48.0" prefWidth="244.0" textFill="#da1111">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblTime" layoutX="1028.0" layoutY="14.0" prefHeight="37.0" prefWidth="158.0" text="11 : 34 : 34 AM">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1028.0" layoutY="51.0" prefHeight="37.0" prefWidth="158.0" text="9/6/2021">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

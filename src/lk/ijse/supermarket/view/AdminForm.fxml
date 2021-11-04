@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="567.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.AdminFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="249.0" layoutY="23.0" prefHeight="75.0" prefWidth="444.0" text="Admin Dashboard" textFill="#1e3163">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Separator layoutX="68.0" layoutY="125.0" prefHeight="1.0" prefWidth="811.0" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="45.0" layoutY="395.0" prefHeight="42.0" prefWidth="845.0" text="Welcome" textFill="#3e00ff">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="366.0" layoutY="512.0" prefHeight="27.0" prefWidth="204.0" text="Copyrights 2021">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="29.0" layoutY="446.0" prefHeight="33.0" prefWidth="890.0" text="Please select one of above main operations to proceed" />
+      <ImageView fx:id="imgProduct" fitHeight="150.0" fitWidth="200.0" layoutX="269.0" layoutY="188.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/items.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgCashier" fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="188.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/user.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="87.0" layoutX="25.0" layoutY="19.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="734.0" layoutY="19.0" prefHeight="42.0" prefWidth="185.0" text="9 / 12 / 2021" textFill="#0f52ba">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER_RIGHT" layoutX="734.0" layoutY="57.0" prefHeight="42.0" prefWidth="185.0" text="12:39 PM" textFill="#0f52ba">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgBatch" fitHeight="150.0" fitWidth="200.0" layoutX="474.0" layoutY="188.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/ingredients.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgOrders" fitHeight="150.0" fitWidth="150.0" layoutX="701.0" layoutY="188.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/external-order-online-shopping-itim2101-flat-itim2101.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

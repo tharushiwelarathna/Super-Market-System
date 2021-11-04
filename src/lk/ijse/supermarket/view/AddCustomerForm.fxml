@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="904.0" prefWidth="1208.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.AddCustomerFormController">
+   <children>
+      <ImageView fx:id="imgGoCustomerOrder" fitHeight="84.0" fitWidth="88.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="138.0" layoutY="24.0" prefHeight="64.0" prefWidth="386.0" text="Manage Customer">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNewCustomer" layoutX="954.0" layoutY="33.0" onAction="#btnAddNewCustomerOnAction" prefHeight="47.0" prefWidth="232.0" style="-fx-background-color: #9FD8DF;" text="Add New Customer">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="20.0" layoutY="115.0" prefHeight="759.0" prefWidth="1166.0" style="-fx-background-color: #9DDFD3;">
+         <children>
+            <Label layoutX="37.0" layoutY="36.0" prefHeight="47.0" prefWidth="169.0" text="Customer ID">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="107.0" prefHeight="47.0" prefWidth="169.0" text="Customer Type">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="177.0" prefHeight="47.0" prefWidth="169.0" text="Customer Name">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="255.0" prefHeight="47.0" prefWidth="169.0" text="Address">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="573.0" layoutY="36.0" prefHeight="47.0" prefWidth="169.0" text="City">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="573.0" layoutY="107.0" prefHeight="47.0" prefWidth="169.0" text="Province">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="573.0" layoutY="177.0" prefHeight="47.0" prefWidth="169.0" text="Contact">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerID" layoutX="206.0" layoutY="36.0" prefHeight="47.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtCustomerName" layoutX="206.0" layoutY="177.0" prefHeight="47.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtAddress" layoutX="206.0" layoutY="255.0" prefHeight="47.0" prefWidth="420.0" />
+            <JFXTextField fx:id="txtCity" layoutX="749.0" layoutY="36.0" prefHeight="47.0" prefWidth="375.0" />
+            <JFXTextField fx:id="txtProvince" layoutX="749.0" layoutY="107.0" prefHeight="47.0" prefWidth="375.0" />
+            <JFXComboBox fx:id="cmbCustomerType" layoutX="206.0" layoutY="107.0" onAction="#cmbCustomerTypeOnAction" prefHeight="47.0" prefWidth="317.0" />
+            <JFXButton fx:id="btnSaveCustomer" layoutX="451.0" layoutY="356.0" onAction="#btnSaveCustomerOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #29BB89;" text="Save Customer">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblCustomer" layoutX="4.0" layoutY="417.0" prefHeight="338.0" prefWidth="1157.0">
+              <columns>
+                <TableColumn fx:id="colCustID" prefWidth="105.0" text="Customer ID" />
+                <TableColumn fx:id="colCustType" prefWidth="134.0" text="Customer Type" />
+                  <TableColumn fx:id="colCustName" prefWidth="189.0" text="Customer Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="212.0" text="Address" />
+                  <TableColumn fx:id="colCity" prefWidth="157.0" text="City" />
+                  <TableColumn fx:id="colProvince" prefWidth="177.0" text="Province" />
+                  <TableColumn fx:id="colContact" prefWidth="182.0" text="Contact" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnDeleteCustomer" layoutX="690.0" layoutY="356.0" onAction="#btnDeleteCustomerOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #FB3640;" text="Delete Customer">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateCustomer" layoutX="927.0" layoutY="356.0" onAction="#btnUpdateCustomerOnAction" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #1597BB;" text="Update Customer">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtContact" layoutX="749.0" layoutY="177.0" prefHeight="47.0" prefWidth="375.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
